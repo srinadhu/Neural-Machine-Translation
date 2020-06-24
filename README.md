@@ -1,2 +1,2 @@
 # Neural-Machine-Translation
-Neural Machine Translation (NMT) from Spanish to English. Model is Seq2Seq + Attention.
+Neural Machine Translation (NMT) from Spanish (source) to English (target). The architecture is Seq2Seq + Multiplicative Attention + Character-level conditional English (target) language model. Both the Encoder and Decoder word embeddings are calculated by respective character-level convolutional models. A separate character-level conditional English (target) language model is jointly-trained along with encoder-decoder, which during test-time replaces only 'unk' (unknown) word generations with it's own generated words. The whole architecture achieves a BLEU score of 36.56
